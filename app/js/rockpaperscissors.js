@@ -69,7 +69,21 @@ function playToFive() {
     var playerWins = 0;
     var computerWins = 0;
     // Write code that plays 'Rock, Paper, Scissors' until either the player or the computer has won five times.
-    /* YOUR CODE HERE */
-    return [playerWins, computerWins];
+    while ((playerWins <= 5) && (computerWins <= 5)) {
+ 	var computerMove = getComputerMove(); 
+    var playerMove = getPlayerMove(); 
+    var winner = getWinner(playerMove , computerMove);
+    console.log('Player chooses' + playerMove + '. Computer chooses ' + computerMove);
+    if (winner == "Player") { 
+        playerWins += 1; 
+    } 
+    else if (winner == "Computer") { 
+        computerWins += 1;
+    } 
+    if ((playerWins == 5) || (computerWins == 5)); { 
+        console.log('The score is' + playerWins + 'to' + computerWins);
+    }
+ }
+  return [playerWins, computerWins];
 }
 
